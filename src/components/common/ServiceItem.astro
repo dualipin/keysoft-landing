@@ -6,7 +6,7 @@ const { service, index } = Astro.props as { service: Service; index: number };
 
 <div class="card border border-base-content/10 bg-base-100/65 shadow-lg">
   <div class="card-body flex-col sm:flex-row items-start gap-5 p-6">
-    <div class="text-4xl font-black text-primary/55 flex-shrink-0">
+    <div class="text-4xl font-black text-primary/55 shrink-0">
       {String(index + 1).padStart(2, "0")}
     </div>
     <div class="space-y-2 w-full">
