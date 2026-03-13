@@ -1,0 +1,25 @@
+---
+import SectionTitle from "../components/ui/SectionTitle.astro";
+import ProjectCard from "../components/common/ProjectCard.astro";
+import { projects } from "../data/projects";
+---
+
+<section
+  id="proyectos"
+  class="relative z-10 px-4 py-20 sm:px-8 md:px-16 lg:px-24"
+>
+  <div class="mx-auto max-w-7xl space-y-8">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div class="space-y-3">
+        <SectionTitle label="Proyectos" title="Trabajos Recientes" />
+      </div>
+      <a href="#contacto" class="link link-primary text-lg"
+        >Ver todos los proyectos</a
+      >
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-2">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </div>
+</section>

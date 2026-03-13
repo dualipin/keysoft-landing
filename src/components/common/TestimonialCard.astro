@@ -1,0 +1,29 @@
+---
+import type { Testimonial } from "../../types";
+import { Quote, Star } from "@lucide/astro";
+
+const { testimonial } = Astro.props as { testimonial: Testimonial };
+---
+
+<div class="card border border-base-content/10 bg-base-100/70 shadow-xl">
+  <div class="card-body gap-4">
+    <div
+      class="badge badge-outline border-primary/40 bg-base-100 p-3 text-primary"
+    >
+      <Quote class="size-4" />
+    </div>
+    <div class="flex gap-1 text-primary">
+      <Star class="size-4 fill-primary" />
+      <Star class="size-4 fill-primary" />
+      <Star class="size-4 fill-primary" />
+      <Star class="size-4 fill-primary" />
+      <Star class="size-4 fill-primary" />
+    </div>
+    <p class="text-base-content/80">"{testimonial.quote}"</p>
+    <div class="divider my-1"></div>
+    <div>
+      <h3 class="font-semibold">{testimonial.name}</h3>
+      <p class="text-sm text-base-content/70">{testimonial.role}</p>
+    </div>
+  </div>
+</div>

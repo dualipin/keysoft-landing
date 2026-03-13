@@ -1,0 +1,8 @@
+---
+const { value, label, class: className = "" } = Astro.props;
+---
+
+<div class={`stat place-items-center ${className}`}>
+  <div class="stat-value text-primary">{value}</div>
+  <div class="stat-title">{label}</div>
+</div>

@@ -1,0 +1,78 @@
+---
+import { COMPANY_NAME } from "../constants/site";
+import SectionTitle from "../components/ui/SectionTitle.astro";
+import { Mail, MapPin, Phone } from "@lucide/astro";
+---
+
+<section
+  id="contacto"
+  class="relative z-10 px-4 pb-20 pt-16 sm:px-8 md:px-16 lg:px-24"
+>
+  <div class="mx-auto max-w-5xl space-y-8">
+    <SectionTitle
+      label="Contacto"
+      title="Tienes un proyecto en mente?"
+      subtitle={`${COMPANY_NAME} esta disponible para colaborar en el desarrollo de soluciones tecnologicas adaptadas a tus objetivos de negocio.`}
+    />
+
+    <div class="card border border-base-content/10 bg-base-100/70 shadow-2xl">
+      <div class="card-body gap-5 p-6 sm:p-10">
+        <label class="form-control w-full gap-2">
+          <span class="label-text">Nombre completo</span>
+          <input
+            type="text"
+            placeholder="Tu nombre"
+            class="input input-bordered w-full"
+          />
+        </label>
+
+        <label class="form-control w-full gap-2">
+          <span class="label-text">Correo electronico</span>
+          <input
+            type="email"
+            placeholder="tu@email.com"
+            class="input input-bordered w-full"
+          />
+        </label>
+
+        <label class="form-control w-full gap-2">
+          <span class="label-text">Mensaje</span>
+          <textarea
+            class="textarea textarea-bordered h-36 w-full"
+            placeholder="Cuentame sobre tu proyecto..."></textarea>
+        </label>
+
+        <div class="card-actions flex-col gap-3 sm:flex-row">
+          <button class="btn btn-primary flex-1">Enviar mensaje</button>
+          <button class="btn btn-outline flex-1"
+            >Iniciar sesion / Registrarse</button
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-3">
+      <div class="card border border-base-content/10 bg-base-100/65 shadow">
+        <div class="card-body p-5">
+          <Mail class="size-5 text-primary" />
+          <h3 class="font-semibold">Email</h3>
+          <p class="text-sm text-base-content/75">contacto@tudominio.com</p>
+        </div>
+      </div>
+      <div class="card border border-base-content/10 bg-base-100/65 shadow">
+        <div class="card-body p-5">
+          <Phone class="size-5 text-primary" />
+          <h3 class="font-semibold">Telefono</h3>
+          <p class="text-sm text-base-content/75">+52 0000000000</p>
+        </div>
+      </div>
+      <div class="card border border-base-content/10 bg-base-100/65 shadow">
+        <div class="card-body p-5">
+          <MapPin class="size-5 text-primary" />
+          <h3 class="font-semibold">Ubicacion</h3>
+          <p class="text-sm text-base-content/75">Tabasco, Mexico</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

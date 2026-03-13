@@ -1,0 +1,34 @@
+---
+import SectionTitle from "../components/ui/SectionTitle.astro";
+import TestimonialCard from "../components/common/TestimonialCard.astro";
+import { testimonials } from "../data/testimonials";
+---
+
+<section
+  id="testimonios"
+  class="relative z-10 px-4 py-20 sm:px-8 md:px-16 lg:px-24"
+>
+  <div class="mx-auto max-w-7xl space-y-8">
+    <div class="space-y-3 text-center">
+      <SectionTitle
+        label="Testimonios"
+        title="Lo que dicen nuestros clientes"
+      />
+      <div
+        class="mx-auto flex w-fit items-center gap-2 rounded-box border border-primary/30 bg-base-100/70 px-4 py-2 text-sm"
+      >
+        <span class="text-primary">★★★★★</span>
+        <span class="font-semibold">4.9/5</span>
+        <span class="text-base-content/70">Calificacion promedio</span>
+      </div>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-3">
+      {
+        testimonials.map((testimonial) => (
+          <TestimonialCard testimonial={testimonial} />
+        ))
+      }
+    </div>
+  </div>
+</section>

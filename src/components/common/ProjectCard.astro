@@ -1,0 +1,35 @@
+---
+import type { Project } from "../../types";
+import Card from "../ui/Card.astro";
+import { ArrowRight } from "@lucide/astro";
+
+const { project } = Astro.props as { project: Project };
+---
+
+<Card class="border border-base-content/10 bg-base-100/70 shadow-xl">
+  <figure>
+    <img
+      src={project.image}
+      alt={project.title}
+      class="h-56 w-full object-cover"
+    />
+  </figure>
+  <div class="card-body gap-4">
+    <div class="flex flex-wrap gap-2">
+      {
+        project.tags.map((tag) => (
+          <span class="badge badge-outline border-primary/30 bg-base-100">
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+    <h3 class="card-title text-2xl">{project.title}</h3>
+    <p class="text-base-content/80">{project.description}</p>
+    <div class="card-actions justify-start">
+      <a class="btn btn-ghost text-primary">
+        Ver detalles <ArrowRight class="size-4" />
+      </a>
+    </div>
+  </div>
+</Card>

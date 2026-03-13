@@ -1,0 +1,15 @@
+---
+const {
+  variant = "primary",
+  outline = false,
+  class: className = "",
+} = Astro.props;
+const base = "badge";
+const variantClass = outline
+  ? `badge-outline badge-${variant}`
+  : `badge badge-${variant}`;
+---
+
+<span class={`${base} ${variantClass} ${className}`}>
+  <slot />
+</span>
