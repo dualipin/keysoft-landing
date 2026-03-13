@@ -9,21 +9,28 @@ import { skillGroups } from "../data/skills";
   class="relative z-10 px-4 py-20 sm:px-8 md:px-16 lg:px-24"
 >
   <div class="mx-auto max-w-7xl space-y-10">
-    <SectionTitle label="Habilidades" title="Stack Tecnologico" />
+    <div data-animate="animate-fade-in-up">
+      <SectionTitle label="Habilidades" title="Stack Tecnologico" />
+    </div>
 
     <div class="space-y-8">
       {
-        skillGroups.map((group) => (
-          <article class="card border border-base-content/10 bg-base-100/65 shadow-xl">
-            <div class="card-body gap-5">
-              <h3 class="card-title text-2xl">{group.title}</h3>
-              <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-                {group.items.map((skill) => (
-                  <SkillCard skill={skill} />
-                ))}
+        skillGroups.map((group, i) => (
+          <div
+            data-animate="animate-fade-in-up"
+            data-animate-delay={`${i * 120}ms`}
+          >
+            <article class="card border border-base-content/10 bg-base-100/65 shadow-xl">
+              <div class="card-body gap-5">
+                <h3 class="card-title text-2xl">{group.title}</h3>
+                <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                  {group.items.map((skill) => (
+                    <SkillCard skill={skill} />
+                  ))}
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </div>
         ))
       }
     </div>

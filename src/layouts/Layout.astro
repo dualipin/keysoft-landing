@@ -25,3 +25,25 @@ import "../styles/global.css";
 		<Footer />
 	</body>
 </html>
+
+<script>
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const el = entry.target as HTMLElement;
+					const animation = el.dataset.animate;
+					const delay = el.dataset.animateDelay;
+					if (delay) el.style.animationDelay = delay;
+					if (animation) el.classList.add(animation);
+					observer.unobserve(el);
+				}
+			});
+		},
+		{ threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+	);
+
+	document.querySelectorAll("[data-animate]").forEach((el) => {
+		observer.observe(el);
+	});
+</script>

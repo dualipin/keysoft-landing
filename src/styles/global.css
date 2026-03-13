@@ -3,6 +3,11 @@
 @plugin "daisyui";
 @plugin 'tailwind-scrollbar';
 
+/* Scroll animations: elementos ocultos hasta que el observer los activa */
+[data-animate] {
+  opacity: 0;
+}
+
 @theme {
   --font-sans: "Inter", system-ui, sans-serif;
   --font-serif: "Source Serif 4", serif;

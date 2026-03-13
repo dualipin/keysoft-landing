@@ -9,7 +9,10 @@ import { projects } from "../data/projects";
   class="relative z-10 px-4 py-20 sm:px-8 md:px-16 lg:px-24"
 >
   <div class="mx-auto max-w-7xl space-y-8">
-    <div class="flex flex-wrap items-end justify-between gap-4">
+    <div
+      data-animate="animate-fade-in-up"
+      class="flex flex-wrap items-end justify-between gap-4"
+    >
       <div class="space-y-3">
         <SectionTitle label="Proyectos" title="Trabajos Recientes" />
       </div>
@@ -19,7 +22,16 @@ import { projects } from "../data/projects";
     </div>
 
     <div class="grid gap-6 lg:grid-cols-2">
-      {projects.map((project) => <ProjectCard project={project} />)}
+      {
+        projects.map((project, i) => (
+          <div
+            data-animate="animate-fade-in-up"
+            data-animate-delay={`${i * 120}ms`}
+          >
+            <ProjectCard project={project} />
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
