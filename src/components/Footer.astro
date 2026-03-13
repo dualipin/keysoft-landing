@@ -2,51 +2,98 @@
 import { COMPANY_NAME } from "../constants/site";
 import logo from "../assets/logos/logo128.webp";
 import { Mail, MapPin, Phone } from "@lucide/astro";
+
+const currentYear = new Date().getFullYear();
 ---
 
 <footer
-  class="footer footer-horizontal bg-neutral text-neutral-content border-t border-base-content/10 p-10"
+  class="bg-neutral text-neutral-content border-t border-base-content/10 p-6 sm:p-10"
 >
-  <aside class="max-w-sm gap-4">
-    <img src={logo.src} alt="Logo" width="64" height="64" class="rounded-box" />
-    <p class="font-semibold text-lg">{COMPANY_NAME}</p>
-    <p class="text-sm text-neutral-content/75">
-      Compania de software especializada en soluciones tecnologicas modernas,
-      escalables y orientadas a resultados.
-    </p>
-    <div class="flex gap-3">
-      <a class="btn btn-circle btn-ghost btn-sm" aria-label="GitHub">G</a>
-      <a class="btn btn-circle btn-ghost btn-sm" aria-label="LinkedIn">in</a>
-    </div>
-  </aside>
+  <div class="mx-auto max-w-7xl">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- About Section -->
+      <div class="space-y-3">
+        <img
+          src={logo.src}
+          alt="Logo"
+          width="48"
+          height="48"
+          class="rounded-box"
+        />
+        <p class="font-semibold text-sm sm:text-base">{COMPANY_NAME}</p>
+        <p class="text-xs sm:text-sm text-neutral-content/75">
+          Especializada en soluciones tecnológicas modernas, escalables y
+          orientadas a resultados.
+        </p>
+        <div class="flex gap-2 pt-2">
+          <a class="btn btn-circle btn-ghost btn-sm" aria-label="GitHub">G</a>
+          <a class="btn btn-circle btn-ghost btn-sm" aria-label="LinkedIn">in</a
+          >
+        </div>
+      </div>
 
-  <nav>
-    <h6 class="footer-title">Enlaces rapidos</h6>
-    <a href="#inicio" class="link link-hover">Inicio</a>
-    <a href="#sobre-nosotros" class="link link-hover">Nosotros</a>
-    <a href="#habilidades" class="link link-hover">Habilidades</a>
-    <a href="#proyectos" class="link link-hover">Proyectos</a>
-  </nav>
+      <!-- Quick Links -->
+      <div>
+        <h6 class="font-semibold text-sm mb-4">Enlaces rápidos</h6>
+        <ul class="space-y-2 text-xs sm:text-sm">
+          <li><a href="#inicio" class="link link-hover">Inicio</a></li>
+          <li>
+            <a href="#sobre-nosotros" class="link link-hover">Nosotros</a>
+          </li>
+          <li>
+            <a href="#habilidades" class="link link-hover">Habilidades</a>
+          </li>
+          <li><a href="#proyectos" class="link link-hover">Proyectos</a></li>
+        </ul>
+      </div>
 
-  <nav>
-    <h6 class="footer-title">Servicios</h6>
-    <a href="#servicios" class="link link-hover">Desarrollo movil</a>
-    <a href="#servicios" class="link link-hover">Sistemas personalizados</a>
-    <a href="#servicios" class="link link-hover">Bases de datos</a>
-    <a href="#servicios" class="link link-hover">Asesoria academica</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Contacto</h6>
-    <div class="space-y-2 text-sm">
-      <p class="flex items-center gap-2">
-        <Mail class="size-4 text-primary" /> contacto@tudominio.com
-      </p>
-      <p class="flex items-center gap-2">
-        <Phone class="size-4 text-primary" /> +52 0000000000
-      </p>
-      <p class="flex items-center gap-2">
-        <MapPin class="size-4 text-primary" /> Tabasco, Mexico
+      <!-- Services -->
+      <div>
+        <h6 class="font-semibold text-sm mb-4">Servicios</h6>
+        <ul class="space-y-2 text-xs sm:text-sm">
+          <li>
+            <a href="#servicios" class="link link-hover">Desarrollo móvil</a>
+          </li>
+          <li>
+            <a href="#servicios" class="link link-hover"
+              >Sistemas personalizados</a
+            >
+          </li>
+          <li>
+            <a href="#servicios" class="link link-hover">Bases de datos</a>
+          </li>
+          <li>
+            <a href="#servicios" class="link link-hover">Asesoría académica</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h6 class="font-semibold text-sm mb-4">Contacto</h6>
+        <ul class="space-y-2 text-xs sm:text-sm">
+          <li class="flex items-center gap-2">
+            <Mail class="size-4 text-primary flex-shrink-0" />
+            <span class="truncate">contacto@tudominio.com</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <Phone class="size-4 text-primary flex-shrink-0" />
+            <span>+52 0000000000</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <MapPin class="size-4 text-primary flex-shrink-0" />
+            <span>Tabasco, México</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-neutral-content/20 mt-8 pt-6">
+      <p class="text-center text-xs sm:text-sm text-neutral-content/70">
+        © {currentYear}
+        {COMPANY_NAME}. Todos los derechos reservados.
       </p>
     </div>
-  </nav>
+  </div>
 </footer>
