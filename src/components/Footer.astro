@@ -1,39 +1,52 @@
 ---
 import { COMPANY_NAME } from "../constants/site";
 import logo from "../assets/logos/logo128.webp";
+import { Mail, MapPin, Phone } from "@lucide/astro";
 ---
 
 <footer
-  class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10"
+  class="footer footer-horizontal bg-neutral text-neutral-content border-t border-base-content/10 p-10"
 >
-  <aside>
-    <img
-      src={logo.src}
-      alt="Logo"
-      width="128"
-      height="128"
-      class="rounded-box"
-    />
-    <p class="font-semibold text-lg">
-      {COMPANY_NAME}
+  <aside class="max-w-sm gap-4">
+    <img src={logo.src} alt="Logo" width="64" height="64" class="rounded-box" />
+    <p class="font-semibold text-lg">{COMPANY_NAME}</p>
+    <p class="text-sm text-neutral-content/75">
+      Compania de software especializada en soluciones tecnologicas modernas,
+      escalables y orientadas a resultados.
     </p>
+    <div class="flex gap-3">
+      <a class="btn btn-circle btn-ghost btn-sm" aria-label="GitHub">G</a>
+      <a class="btn btn-circle btn-ghost btn-sm" aria-label="LinkedIn">in</a>
+    </div>
   </aside>
+
   <nav>
-    <h6 class="footer-title">Social</h6>
-    <div class="grid grid-flow-col gap-4">
-      <a>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current"
-        >
-          <path
-            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
-          ></path>
-        </svg>
-      </a>
+    <h6 class="footer-title">Enlaces rapidos</h6>
+    <a href="#inicio" class="link link-hover">Inicio</a>
+    <a href="#sobre-nosotros" class="link link-hover">Nosotros</a>
+    <a href="#habilidades" class="link link-hover">Habilidades</a>
+    <a href="#proyectos" class="link link-hover">Proyectos</a>
+  </nav>
+
+  <nav>
+    <h6 class="footer-title">Servicios</h6>
+    <a href="#servicios" class="link link-hover">Desarrollo movil</a>
+    <a href="#servicios" class="link link-hover">Sistemas personalizados</a>
+    <a href="#servicios" class="link link-hover">Bases de datos</a>
+    <a href="#servicios" class="link link-hover">Asesoria academica</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Contacto</h6>
+    <div class="space-y-2 text-sm">
+      <p class="flex items-center gap-2">
+        <Mail class="size-4 text-primary" /> contacto@tudominio.com
+      </p>
+      <p class="flex items-center gap-2">
+        <Phone class="size-4 text-primary" /> +52 0000000000
+      </p>
+      <p class="flex items-center gap-2">
+        <MapPin class="size-4 text-primary" /> Tabasco, Mexico
+      </p>
     </div>
   </nav>
 </footer>

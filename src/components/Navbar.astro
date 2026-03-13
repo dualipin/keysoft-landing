@@ -1,7 +1,6 @@
 ---
 import { COMPANY_NAME } from "../constants/site";
 import logo from "../assets/logos/logo64.webp";
-import ThemeToggle from "./ThemeToggle.astro";
 import { Menu } from "@lucide/astro";
 ---
 
@@ -17,10 +16,12 @@ import { Menu } from "@lucide/astro";
         tabindex="-1"
         class="menu menu-md dropdown-content bg-base-100 text-xl rounded-box z-1 mt-3 w-52 p-2 shadow"
       >
-        <li><a>Inicio</a></li>
-        <li><a>Nosotros</a></li>
-        <li><a>Servicios</a></li>
-        <li><a>Contacto</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-nosotros">Nosotros</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
     <div class="flex items-center text-xl">
@@ -36,14 +37,16 @@ import { Menu } from "@lucide/astro";
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><a>Inicio</a></li>
-      <li><a>Nosotros</a></li>
-      <li><a>Servicios</a></li>
-      <li><a>Contacto</a></li>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-nosotros">Nosotros</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
     </ul>
   </div>
   <div class="navbar-end gap-3">
-    <a class="btn btn-primary">Contactar</a>
-    <ThemeToggle />
+    <a class="btn btn-outline btn-sm sm:btn-md">Iniciar sesion</a>
+    <a href="#contacto" class="btn btn-primary btn-sm sm:btn-md">Contratar</a>
   </div>
 </div>
