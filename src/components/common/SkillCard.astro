@@ -1,20 +1,11 @@
 ---
 import type { Skill } from "../../types";
 import Card from "../ui/Card.astro";
-
 const { skill } = Astro.props as { skill: Skill };
 ---
 
 <Card class="border border-base-content/10 bg-base-100 shadow-sm">
   <div class="card-body gap-2 p-4">
     <h4 class="font-semibold text-lg">{skill.name}</h4>
-    <div class="flex items-center justify-between text-xs text-base-content/70">
-      <span>Dominio</span>
-      <span>{skill.level}%</span>
-    </div>
-    <progress
-      class="progress progress-primary h-2"
-      value={skill.level}
-      max="100"></progress>
   </div>
 </Card>

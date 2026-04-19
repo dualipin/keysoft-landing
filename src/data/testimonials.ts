@@ -3,20 +3,20 @@ import type { Testimonial } from "../types";
 export const testimonials: Testimonial[] = [
   {
     name: "Carlos Mendez",
-    role: "Aplicacion movil empresarial",
+    role: "Aplicación móvil empresarial",
     quote:
-      "Excelente equipo de desarrollo. Entregaron antes del tiempo estimado y con gran calidad tecnica.",
+      "Excelente equipo de desarrollo. Entregaron antes del tiempo estimado y con gran calidad técnica.",
   },
   {
     name: "Ana Rodriguez",
-    role: "Proyecto academico universitario",
+    role: "Proyecto académico universitario",
     quote:
       "Servicio profesional y responsable. Nos ayudaron a completar el sistema con resultados por encima de lo esperado.",
   },
   {
     name: "Roberto Sanchez",
-    role: "Sistema de gestion empresarial",
+    role: "Sistema de gestión empresarial",
     quote:
-      "El sistema optimizo nuestros procesos. Recomendamos su trabajo por detalle tecnico y comunicacion clara.",
+      "El sistema optimizó nuestros procesos. Recomendamos su trabajo por su detalle técnico y comunicación clara.",
   },
 ];
