@@ -1,4 +1,4 @@
-# 🚀 Emprendimiento - Landing Page
+# 🚀 KeySoft - Landing Page
 
 **Soluciones tecnológicas modernas para un mundo conectado**
 
@@ -51,7 +51,7 @@ Una landing page profesional y responsiva desarrollada con [Astro](https://astro
 1. **Clonar o descargar el proyecto:**
 ```bash
 git clone <repository-url>
-cd landing-emprendimiento
+cd landing-keysoft
 ```
 
 2. **Instalar dependencias:**
@@ -99,7 +99,7 @@ El proyecto puede desplegarse en:
 ## 📁 Estructura del Proyecto
 
 ```
-landing-emprendimiento/
+landing-keysoft/
 ├── public/
 │   ├── robots.txt              # Configuración para crawlers
 │   └── og-image.png            # Imagen Open Graph (1200x630px)
@@ -260,7 +260,7 @@ Edita las secciones en `/src/sections/`:
 
 ## 📧 Contacto
 
-Para más información sobre Emprendimiento:
+Para más información sobre KeySoft:
 
 - **Email**: contacto@tudominio.com
 - **Teléfono**: +52 0000000000
@@ -270,7 +270,7 @@ Para más información sobre Emprendimiento:
 
 ## 📄 Licencia
 
-Este proyecto es de uso privado. Todos los derechos reservados © 2024 Emprendimiento.
+Este proyecto es de uso privado. Todos los derechos reservados © 2024 KeySoft.
 
 ---
 
@@ -288,4 +288,4 @@ Este proyecto es de uso privado. Todos los derechos reservados © 2024 Emprendim
 
 ---
 
-Made with ❤️ by **Emprendimiento** | Powered by [Astro](https://astro.build/)
+Made with ❤️ by **KeySoft** | Powered by [Astro](https://astro.build/)
