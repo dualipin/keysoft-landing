@@ -2,7 +2,7 @@ import type { SkillGroup } from "../types";
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Lenguajes de Programacion",
+    title: "Lenguajes de Programación",
     items: [
       { name: "C#", level: 95 },
       { name: "Python", level: 90 },
@@ -11,7 +11,7 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    title: "Tecnologias y Frameworks",
+    title: "Tecnologías y Frameworks",
     items: [
       { name: ".NET", level: 95 },
       { name: ".NET MAUI", level: 90 },
@@ -24,7 +24,7 @@ export const skillGroups: SkillGroup[] = [
     items: [
       { name: "Visual Studio", level: 95 },
       { name: "Git y GitHub", level: 90 },
-      { name: "Diseno de BD", level: 88 },
+      { name: "Diseño de BD", level: 88 },
     ],
   },
 ];
